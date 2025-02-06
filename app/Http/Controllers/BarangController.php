@@ -71,7 +71,7 @@ class BarangController extends Controller
         ];
 
         DB::table('barang')->where('id', $id)->update($data);
-        return redicet()->view('barang.index',
+        return redicet()->view('barang.index',);
         }
 
 
