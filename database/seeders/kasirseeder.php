@@ -20,6 +20,6 @@ class kasirseeder extends Seeder
             ]
             ];
         DB::table('kasir')->insert($data);
-       
+
     }
 }
