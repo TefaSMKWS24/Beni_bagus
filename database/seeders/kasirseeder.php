@@ -14,7 +14,7 @@ class kasirseeder extends Seeder
     {
         $data = [
             [
-                'kode_kasir' => 'K001',
+                'kode_kasir' => 'KS01',
                 'nama_kasir' => 'kasir 1',
                 'password' => hash::make('1234'),
             ]
