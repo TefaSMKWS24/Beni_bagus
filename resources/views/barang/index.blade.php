@@ -27,7 +27,11 @@
 <table>
     <thead>
         <tr>
+<<<<<<< HEAD
             <th>NO</th>
+=======
+            <th>No</th>
+>>>>>>> 9f5fecbd64aef124cf28dbd035af8b17947c3aba
             <th>Nama Barang</th>
             <th>Harga</th>
             <th>Stok</th>
@@ -36,6 +40,7 @@
         </tr>
     </thead>
     <tbody>
+<<<<<<< HEAD
         @foreach ($barang as $b)
         <tr>
             <td>{{ $loop->iteration }}</td>
@@ -51,5 +56,23 @@
                     <button type="submit" class="btn btn-danger">Hapus</button>
                 </form>
             </td>
+=======
+        @foreach ($barang as $item)
+        <tr>
+            <td>{{ $loop->iteration }}</td>
+            <td>{{ $item->kode_barang }}</td>
+            <td>{{ $item->nama_barang }}</td>
+            <td>{{ $item->kategori->nama_kategori }}</td>
+            <td>{{ $item->harga }}</td>
+            <td>{{ $item->stok }}</td>
+            <td>
+                <a href="/barang/{{ $item->kode_barang }} }}/edit" class="btn btn-primary">Edit</a>
+                <form action="/barang/delete/{{ $item->kode_barang }}"  class="btn btn-danger">hapus</a>
+            </td>
+        </tr>
+        @endforeach
+    </tbody>
+</table>
+>>>>>>> 9f5fecbd64aef124cf28dbd035af8b17947c3aba
 
 @endsection

@@ -14,19 +14,22 @@ class barangseeder extends Seeder
     {
         $data = [
             [
-                'kode_barang' => 'B001',
-                'nama_barang' => 'beras',
+
+                'kode_barang' => 'BR01',
+                'nama_barang' => 'minyak',
                 'harga' => '10000',
                 'stok' => '10',
-                'kode_kategori' => 'K001',
+                'kode_kategori' => 'KT01',
             ],
-            [   'kode_barang' => 'B002',
-                'nama_barang' => 'telur',
-                'harga' => '10000',
-                'stok' => '10',
-                'kode_kategori' => 'K001',
-        ],
+            [
+                'kode_barang' => 'BR02',
+                'nama_barang' => 'beras',
+                'harga' => '20000',
+                'stok' => '20',
+                'kode_kategori' => 'KT02',
+            ],
         ];
+
         DB::table('barang')->insert($data);
     }
 }

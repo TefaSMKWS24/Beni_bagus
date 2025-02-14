@@ -4,6 +4,8 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 
 class kasirseeder extends Seeder
 {
@@ -14,9 +16,9 @@ class kasirseeder extends Seeder
     {
         $data = [
             [
-                'kode_kasir' => 'K001',
+                'kode_kasir' => 'KS01',
                 'nama_kasir' => 'kasir 1',
-                'password' => hash::make('1234'),
+                'password' => hash::make('12345678'),
             ]
             ];
         DB::table('kasir')->insert($data);
