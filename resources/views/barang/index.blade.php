@@ -24,4 +24,32 @@
 
 @section('content')
 
+<table>
+    <thead>
+        <tr>
+            <th>NO</th>
+            <th>Nama Barang</th>
+            <th>Harga</th>
+            <th>Stok</th>
+            <th>Kategori</th>
+            <th>Aksi</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach ($barang as $b)
+        <tr>
+            <td>{{ $loop->iteration }}</td>
+            <td>{{ $b->nama_barang }}</td>
+            <td>{{ $b->harga }}</td>
+            <td>{{ $b->stok }}</td>
+            <td>{{ $b->kategori->nama_kategori }}</td>
+            <td>
+                <a href="/barang/{{ $b->id }}/edit" class="btn btn-warning">Edit</a>
+                <form action="/barang/{{ $b->id }}" method="post" class="d-inline">
+                    @method('delete')
+                    @csrf
+                    <button type="submit" class="btn btn-danger">Hapus</button>
+                </form>
+            </td>
+
 @endsection
